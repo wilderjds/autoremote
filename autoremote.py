@@ -56,7 +56,7 @@ if __name__ == "__main__":
 	if args.name:
 		_name = args.name
 	else:
-		_name="[YOUR DEVICE NAME]"
+		_name=""
 
 	if args.url:
 		_url = args.url
@@ -69,7 +69,9 @@ if __name__ == "__main__":
 		#_msg= "say 5=:=This is a Autoremote test!"
 		_msg="notify Test=:=This is a Autoremote test!"
 
-	ar=autoremote(url=_url)
-	ar.register(name=_name)
-	ar.send(_msg)
+	ar=autoremote(url=_url)   # Connect to autoremote server
+	if _name:
+		ar.register(name=_name)   # Register device
+	if _msg:
+		ar.send(_msg)			  # Send Message
 
