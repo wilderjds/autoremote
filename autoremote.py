@@ -56,12 +56,12 @@ if __name__ == "__main__":
 	if args.name:
 		_name = args.name
 	else:
-		_name="S5"
+		_name="[YOUR DEVICE NAME]"
 
 	if args.url:
 		_url = args.url
 	else:
-		_url="http://goo.gl/T8nIJr"
+		_url="[YOUR AUTORUN URL"
 
 	if args.msg:
 		_msg = args.msg
