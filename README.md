@@ -1,16 +1,21 @@
-Autoremote-python
-=================
-
-
+This Derivative: Dan Yeakley at https://github.com/ddyeakley/Autoremote-python
+Original autoremote.py author:  sriramsv/Autoremote-python at https://github.com/sriramsv/Autoremote-python
 Credits: Joao dias (developer of the autoremote plugin for tasker)
 
-Here is a small autoremote python wrapper module. I use it on my raspberry pi.  Copy the module on any linux machine into /usr/lib/python/2.x/ import the module in your python code: Then you can mainly use two functions:
+Here is a small autoremote python wrapper module that can be used on a Raspberry PI.  Copy the module on any into /usr/lib/python/2.x/ import the module into your python code.
 
-1)autoremote.autoremote_send('YOUR MESSAGE IN QOUTES') 
+General API usage:
 
-2)autoremote.autoremote_reg() 
+	ar=autoremote("your autoremote url")   	# Connect to autoremote server
+	ar.register("your device name")   		# Register device
+	ar.send("message to send")			  	# Send Message
 
-The first one will send any message and the second one will register the device on your other android devices or even eventghost on windows.
+Command line usage:
+	
+	usage: autoremote.py [-h] [-n NAME] [-u URL] [-m MSG]
 
-
-There are few variables which I have marked. change the key to your respective autoremote key and localip to your device IP address.﻿
+	optional arguments:
+	  -h, --help            show this help message and exit
+	  -n NAME, --name NAME  Autoremote name
+	  -u URL, --url URL     Autoremote url
+	  -m MSG, --msg MSG     Autoremote message
