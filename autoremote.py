@@ -61,7 +61,7 @@ if __name__ == "__main__":
 	if args.url:
 		_url = args.url
 	else:
-		_url="[YOUR AUTORUN URL"
+		_url="[YOUR AUTORUN URL]"
 
 	if args.msg:
 		_msg = args.msg
