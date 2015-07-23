@@ -1,8 +1,9 @@
 Autoremote.py 
 
-This Derivative: Dan Yeakley at https://github.com/ddyeakley/Autoremote-python
-Original autoremote.py author:  sriramsv/Autoremote-python at https://github.com/sriramsv/Autoremote-python
-Credits: Joao dias (developer of the autoremote plugin for tasker)
+Credits:
+	This Derivative: Dan Yeakley at https://github.com/ddyeakley/Autoremote-python
+	Original autoremote.py author:  sriramsv/Autoremote-python at https://github.com/sriramsv/Autoremote-python
+	Autoremote plugin for Tasker: Joao dias
 
 Here is a small autoremote python wrapper module that can be used on a Raspberry PI.  Copy the module on any into /usr/lib/python/2.x/ import the module into your python code.
 
