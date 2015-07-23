@@ -61,16 +61,15 @@ if __name__ == "__main__":
 	if args.url:
 		_url = args.url
 	else:
-		_url="[YOUR AUTORUN URL]"
+		_url="[YOUR AUTOREMOTE URL]"
 
 	if args.msg:
 		_msg = args.msg
 	else:
-		#pc.send("say 5=:=This is a Autoremote test!")
-		pc.send("notify Test=:=This is a Autoremote test!")
+		#_msg= "say 5=:=This is a Autoremote test!"
+		_msg="notify Test=:=This is a Autoremote test!"
 
 	ar=autoremote(url=_url)
 	ar.register(name=_name)
-
 	ar.send(_msg)
 
