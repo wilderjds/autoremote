@@ -5,7 +5,6 @@ import argparse
 
 class autoremote:
 	def __init__(self, url=None):
-
 		self.key_url=requests.get(url,allow_redirects=True)
 		if self.key_url.status_code==200:
 			url=self.key_url.url
@@ -13,6 +12,7 @@ class autoremote:
 			self.key=self.key.group(1)
 		else:
 			raise Exception("Can not connect to Autoremote!!!")
+
 		print("Fetching global ip")
 		self.publicip = requests.get("http://ipecho.net/plain")
 		if self.publicip.status_code==200:
@@ -68,9 +68,18 @@ if __name__ == "__main__":
 		#_msg= "say 5=:=This is a Autoremote test!"
 		_msg="notify Test=:=This is a Autoremote test!"
 
-	ar=autoremote(url=_url)   # Connect to autoremote server
-	if _name:
-		ar.register(name=_name)   # Register device
-	if _msg:
-		ar.send(_msg)			  # Send Message
+	try:
+		ar=autoremote(url=_url)   # Connect to autoremote server
+		if _name:
+			try:
+				ar.register(name=_name)   # Register device
+			except:
+				print ("Unable to register device with Autoremote!!!")
+		if _msg:
+			try:
+				ar.send(_msg)			  # Send Message
+			except:
+				print ("Unable to send message!!!")
+	except:
+		print ("Unable to connect to Autoremote!!!")
 
