@@ -2,7 +2,6 @@ import re
 import os
 import requests
 import argparse
-#import subprocess
 
 class autoremote:
 	def __init__(self, url=None):
