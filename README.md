@@ -8,7 +8,7 @@ Credits:
 
 Install:
 
-pip -install git+https://github.com/ddyeakley/autoremote.git
+sudo pip -install git+https://github.com/ddyeakley/autoremote.git
 
 General API usage:
 
