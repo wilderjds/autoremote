@@ -10,5 +10,5 @@ setup(
     long_description="README.txt",
     packages=['autoremote'],
     include_package_data=False,
-    description="Simple Python tool to use autoremote to send data to a phone running tasker",
+    description="Simple Python tool to use autoremote to send data to a phone running tasker.",
 )
