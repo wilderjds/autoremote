@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='autormeote',
+    name='autoremote',
     version='0.1',
     license='MIT',
     author='Dan Yeakley',
