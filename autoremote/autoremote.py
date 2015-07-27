@@ -4,7 +4,7 @@ import requests
 import argparse
 
 
-class AutoRemote:
+class autoremote:
     def __init__(self, url=None):
         self.key_url = requests.get(url, allow_redirects=True)
         if self.key_url.status_code == 200:
@@ -69,7 +69,7 @@ if __name__ == "__main__":
 
     # noinspection PyBroadException
     try:
-        ar = AutoRemote(url=_url)   # Connect to AutoRemote server
+        ar = autoremote(url=_url)   # Connect to AutoRemote server
         if _name:
             # noinspection PyBroadException
             try:
