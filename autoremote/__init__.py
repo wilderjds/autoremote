@@ -1,1 +1,1 @@
-import autoremote
+from .autoremote import Autoremote
