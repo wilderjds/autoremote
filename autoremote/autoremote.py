@@ -37,6 +37,16 @@ class Autoremote:
             print("{0} sent successfully".format(msg))
         else:
             raise Exception("AutoRemote failed to send message!!!")
+
+    def notification(self, msg):
+        send_url = "http://autoremotejoaomgcd.appspot.com/sendnotification?key={0}&text={1}".format(self.key, msg)
+        send_req = requests.get(send_url)
+        if send_req.status_code == 200:
+            print("{0} sent successfully".format(msg))
+        else:
+            raise Exception("AutoRemote failed to send message!!!")
+
+
 if __name__ == "__main__":
 
     # Define and parse command line arguments
@@ -80,6 +90,7 @@ if __name__ == "__main__":
             # noinspection PyBroadException
             try:
                 ar.send(_msg)			  # Send Message
+                ar.notification("dadadap")
             except:
                 print ("Unable to send message!!!")
     except:
